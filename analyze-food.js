@@ -9,7 +9,7 @@ export default async function handler(req, res) {
   }
 
   const apiKey = process.env.GEMINI_API_KEY;
-  const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${apiKey}`;
+  const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=${apiKey}`;
 
   const prompt = "Identify the food in this photo and estimate its nutrition. The person is vegetarian and does not eat eggs, so factor that into what you think the dish is. Respond with ONLY raw JSON, no markdown fences, no commentary, in exactly this shape: {\"name\": \"short dish description\", \"calories\": number, \"protein\": number, \"carbs\": number, \"fat\": number}. Numbers are grams for protein/carbs/fat and kcal for calories, estimated for the visible portion.";
 
